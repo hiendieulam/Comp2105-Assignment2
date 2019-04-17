@@ -1,0 +1,65 @@
+body {
+  font: 150%/1.4 Futura, Helvetica, Arial, serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header nav {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: -300px;
+  top: 50px;
+  width: 250px;
+  padding-left: 100px;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 1em;
+  padding: 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:link {
+  color: white;
+}
+
+header nav a:visited {
+  color: white;
+}
+
+header nav a:focus {}
+
+header nav a:hover {
+  color: red;
+}
+
+header nav a:active {
+  color: yellow;
+}
+
+header nav a[title="Navigation Panel"] {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  /* Set up transition to handle animation .2s */
+  transition: transform .2s;
+}
+
+
+/* Add interactive class .rotated with appropriate transform */
+.rotated {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 3</title>
+<style>
+	body {
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-row-gap: 40px;
+		margin: 0 auto;
+	}
+
+	.skewX:hover { 
+		transform: skewX(40deg) scale(2); 
+		transition: 1s;
+		}
+
+	.scale:hover { 
+		transform:scale(2);
+		transition: 2s;
+		}
+
+	.skewY:active { 
+		transform: skewY(-20deg) translateX(20px) translateY(80px); 
+		transition: 2s;
+		}
+	.rotate {
+		perspective:100px;
+		transition:2s;
+	}
+	.rotate:hover{
+		transform:rotateX(70deg);
+	}
+	.candle{
+		transition:500ms;
+	}
+	.fire {
+		transform: translate(25px, -15px) rotate(10deg);
+	}
+	
+</style>
+</head>
+
+<body>
+	<div class="skewX" >
+	  <img src="http://aws.computerstudi.es/~gc800182472/comp2105/icons_png/ic_deer.png" alt="">
+	</div >
+	<div class="scale">
+	  <img src="http://aws.computerstudi.es/~gc800182472/comp2105/icons_png/ic_gift.png" alt="">
+	</div>
+	<div class="skewY">
+	  <img src="http://aws.computerstudi.es/~gc800182472/comp2105/icons_png/ic_santa.png" alt="">
+	</div>
+	<div class="rotate">
+	  <img src="http://aws.computerstudi.es/~gc800182472/comp2105/icons_png/ic_tree.png" alt="">
+	</div>
+	<div class="circle">
+	  <!-- <img src="http://aws.computerstudi.es/~gc800182472/comp2105/icons_svg/ic_candle.svg" alt=""> -->
+		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 200" width="200" height="200">
+			<defs>
+				<path d="M97.38 127.5C100.04 127.5 101.38 128.83 101.38 131.5C101.38 150.7 101.38 161.37 101.38 163.5C101.38 166.17 100.04 167.5 97.38 167.5C83.58 167.5 75.91 167.5 74.38 167.5C71.71 167.5 70.38 166.17 70.38 163.5C70.38 144.3 70.38 133.63 70.38 131.5C70.38 128.83 71.71 127.5 74.38 127.5C88.18 127.5 95.84 127.5 97.38 127.5Z" id="g1raZVllq">
+
+				</path>
+				<path d="M91.38 123.5C94.04 123.5 95.38 124.83 95.38 127.5C95.38 146.7 95.38 157.37 95.38 159.5C95.38 162.17 94.04 163.5 91.38 163.5C77.58 163.5 69.91 163.5 68.38 163.5C65.71 163.5 64.38 162.17 64.38 159.5C64.38 140.3 64.38 129.63 64.38 127.5C64.38 124.83 65.71 123.5 68.38 123.5C82.18 123.5 89.84 123.5 91.38 123.5Z" id="bHqG66a56">
+					
+				</path>
+				<path d="M83.38 116.5C80.06 116.5 77.38 113.81 77.38 110.5C77.38 109.47 77.63 108.5 78.09 107.65C78.52 106.91 81.94 100.97 82.37 100.23C82.92 99.28 83.82 99.27 84.38 100.23C84.81 100.99 88.3 107.04 88.74 107.8C89.14 108.61 89.38 109.53 89.38 110.5C89.38 113.81 86.69 116.5 83.38 116.5Z" id="eBmdjBVru">
+
+				</path>
+				<path d="M85.38 110.5C85.38 113.81 82.69 116.5 79.38 116.5C76.06 116.5 73.38 113.81 73.38 110.5C73.38 109.57 73.59 108.7 73.96 107.91C73.96 107.91 73.96 107.91 73.95 107.91C73.99 107.85 74.01 107.81 74.01 107.81C74.11 107.6 74.23 107.41 74.35 107.22C74.68 106.64 76.36 103.73 79.38 98.5L84.28 107.05C85.01 108.49 85.38 109.64 85.38 110.5Z" id="d1R9aPeU5j">
+
+				</path>
+				<path d="M87.88 149.5L87.88 154.5" id="jiA02KqaA">
+
+				</path>
+				<path d="M87.88 140.5L87.88 142.5" id="eBHabnR2v">
+
+				</path>
+			</defs>
+					<g>
+						<g>
+							<g><use xlink:href="#g1raZVllq" opacity="1" fill="#f4bb5f" fill-opacity="1"></use>
+							<g><use xlink:href="#g1raZVllq" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+						</g>
+					</g>
+					<g><use xlink:href="#bHqG66a56" opacity="1" fill="#000000" fill-opacity="0"></use>
+						<g><use xlink:href="#bHqG66a56" opacity="1" fill-opacity="0" stroke="#2b2d2b" stroke-width="4" stroke-opacity="1" width="400px"></use></g>
+					</g>
+					<g class="candle"><use xlink:href="#eBmdjBVru" opacity="1" fill="#fa5e38" fill-opacity="1"></use>
+						<g><use xlink:href="#eBmdjBVru" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+						</g>
+					</g>
+					<g class="candle"><use xlink:href="#d1R9aPeU5j" opacity="1" fill="#000000" fill-opacity="0"></use>
+						<g><use xlink:href="#d1R9aPeU5j" opacity="1" fill-opacity="0" stroke="#2b2d2b" stroke-width="4" stroke-opacity="1"></use>
+						</g>
+					</g>
+					<g><use xlink:href="#jiA02KqaA" opacity="1" fill="#000000" fill-opacity="0"></use>
+						<g><use xlink:href="#jiA02KqaA" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="3" stroke-opacity="1"></use></g>
+					</g>
+					<g><use xlink:href="#eBHabnR2v" opacity="1" fill="#000000" fill-opacity="0"></use>
+						<g><use xlink:href="#eBHabnR2v" opacity="1" fill-opacity="0" stroke="#ffffff" stroke-width="3" stroke-opacity="1"></use></g>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</div>		
+	
+  </body>
+
+<script>
+	const soundCandle= new Audio("sound/candle.mp3");
+	const candle = document.querySelector(".circle");
+	const fire = document.querySelectorAll(".candle");
+	candle.addEventListener("mouseover", () =>{
+		soundCandle.play();
+		 fire.forEach(function(element) {
+		element.classList.add('fire');	
+		});
+	 });
+	 
+	candle.addEventListener("mouseout", () =>{
+		 fire.forEach(function(element) {
+		element.classList.remove('fire');
+		});
+	 });
+</script>
+</html>

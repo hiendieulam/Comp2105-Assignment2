@@ -1,0 +1,244 @@
+html {
+	background-color: #2b2121;
+
+}
+/** A format as font, color, background,.. for the main **/	
+body {
+  font: 100%/1.25 Helvetica, Arial, sans-serif;
+  color: #000000;
+  background-color: white;
+  align-items: center;
+  font-weight: bold;
+}
+/** A format as fonts, color, text-align, padding, text-shadow,.. of h1 **/	
+h1 {
+    font-family: oswald;
+    font-size: 3.8em;
+    color: #e4fd04;
+    text-align: center;
+    padding-left: 1.5%;
+    padding-top: 2%;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+/** A format as height, width, background,.. for the main **/	
+main {
+  background-image: url("../img/mario_1500x800.jpg");
+  height: 800px;
+  width: 100%;
+
+}
+
+/* Create the 100% statement where the background-position moves to the appropriate position of Mario's walk cycle (see sprite image mario.png above); This keyframe will be called within our animation statement above where we'll be using the animation-timing function called  */
+@keyframes walkcycleright {
+	from { background-position: -371px -75px; } /* Take the picture from position 371px, 75px to 586px, 75px */
+	to { background-position: -586px -75px; }
+}
+
+/* Create the keyframe called moveright where Mario actually moves across the screen 800px to the right */
+@keyframes moveright{
+	0% {transform: translate(0);}
+	100% {transform: translate(800px);}	
+}
+/** A format as height, width, opacity,.. for the Mario **/	
+#mario {
+  height: 80px;
+  width: 75px;
+  background-image: url('http://aws.computerstudi.es/~gc800182472/comp2105/week04/static/images/mario.png');
+  position: relative;
+  top: 680%; 
+  background-position: -295px -75px;  /* Take the picture in the standing position and look to the right * /
+  /* Create the animation statement below that uses our 2 keyframes below that makes Mario walk to the right */  
+  
+}
+
+/* The On or Off button format */
+/** A format as height, width, margin, border, background, display, trasition, padding,... when the button clicked **/	
+#onoffswitch{
+	position:absolute;	
+	width: 150px;
+	height: 60px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-left: 95%;
+    margin-top: -6%;
+    border: 4px solid(#b3b3b1, #d8d8d8) ;
+    background: linear-gradient(to top, #2c0002, #420001, #a10200, #2d0102);
+   
+}
+
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-right: 0;
+    border: 4px solid #d8d8d8;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-right: 0;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-right: 0;
+    border: 4px solid #b3b3b1;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    text-align: right;
+    padding-top: 4%;
+    padding-right: 7%;
+	height: 52px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: 0 solid #b3b3b1;
+    background: linear-gradient(to top, #112700, #103501, #095401, #0c4a01, #132e05);
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10%;
+    text-align: right;
+    padding-top: 4%;
+    width: 80px;
+	height: 52px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-right: 0;
+    border: 0 solid #b3b3b1;
+    background: linear-gradient(to top, #2c0002, #420001, #a10200, #2d0102);
+}
+.onoffswitch-switch {
+    display: block; width: 18px;
+    position: absolute; top: 0; bottom: 0;
+    right: -1%;
+    transition: all 0.3s ease-in 0s; 
+    width: 80px;
+	height: 60px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 0;
+    border: 3px solid #d8d8d8;
+    background: linear-gradient(to top, #fdfdfd, #ececec, #d6d6d6, #fefefe);
+
+}
+ 
+ .on {
+	left: 0; 
+    margin-left: 0;	 
+ }
+/** A format as height, width, opacity,.. for the cloud **/	
+    img.fcloud01 {
+    height: 30px;
+    width: 80px;
+    opacity: 0.8;
+  }
+  img.fcloud02 {
+    height: 50px;
+    width: 130px;
+    opacity: 0.5;
+  }  
+  img.fcloud03 {
+    height: 80px;
+    width: 150px;
+    opacity: 0.3;
+  }  
+  
+  /** Define animation @keyframes  cloud **/
+  @keyframes drift {
+    0%{
+      transform: translateX(-200px)
+    }
+    100%{
+      transform: translateX(1400px)
+    }
+  }
+  
+  /** Apply your custom animation to both clouds below **/
+    .fcloud01 {
+        top:0;
+        z-index: 300;
+        position: relative;
+        animation: drift 20s linear 2;
+
+    }
+            
+    .fcloud02 {
+        top:-7%;
+        z-index: 200;	
+        position: relative;
+        animation: drift 25s linear 3s 2 backwards;
+    }
+              
+    .fcloud03 {
+        top:0%;
+        z-index: 150;	
+        position: relative;
+        animation: drift 30s linear 1 ;
+    }
+
+ /** A format as padding, background, color, display, position, width, margin.... for the all images, texts, class, and id when changing device **/
+@media only screen and (max-width: 640px) {		 	
+    /** Make the menu button visible **/
+    /** A format as background-color, border, width, position,font-size,.. in header **/
+    h1 {
+        font-size: 3em;
+        color: #e4fd04;
+    }
+    #mario {
+        top: 655%; 
+        background-position: -295px -75px;  /* Take the picture in the standing position and look to the right * /
+        /* Create the animation statement below that uses our 2 keyframes below that makes Mario walk to the right */  
+        
+    }  
+    /* The On or Off button's margin format */
+    #onoffswitch{
+        margin-left: 30%;
+        margin-top: 10%;
+        
+    }
+ 
+}

@@ -1,0 +1,80 @@
+/* A letter shake */
+.A{
+  background-image: url('images/A.svg');
+  background-size: 100%;
+  animation: shake 700ms linear infinite;
+}
+@keyframes shake{
+	0% { transform: rotate(0deg); }	
+	25% { transform: rotate(10deg); }	
+	50% { transform: rotate(0deg); }
+	75% { transform: rotate(-10deg);}
+	100% { transform: rotate(0deg); }		
+}
+
+/* B letter circle */
+.B{
+  background-image: url('images/B.svg');
+  background-size: 100%;
+  animation: circle 1000ms linear infinite;
+}
+@keyframes circle{
+	0% { transform: rotate(0deg); }	
+	100% { transform: rotate(359deg); }		
+}
+
+/* The letter C rotates 360 degrees around the center */
+.C{
+  animation: hydrogen 1200ms linear infinite;
+}
+.C:after {
+  background-image: url('images/C.svg');
+  background-size: 100%;
+	  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+}
+
+.C:after {
+  top: 85px;
+  left: -1px;
+}
+
+@keyframes hydrogen{
+	0% { transform: rotate(0deg); }	
+	100% { transform: rotate(-359deg); }		
+}
+
+/* D letter loading */
+.spinner{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 0;
+  top: 0;    
+  display: block;	
+}
+.D{
+  background-image: url('images/D.svg');
+  background-size: 100%;  
+
+}
+.LoadLeft{
+  animation: spinnerleft 2s linear infinite;  
+}
+@keyframes spinnerleft {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-359deg);}
+}
+
+.LoadRight{
+  animation: spinnerright 2s linear infinite;  
+}
+@keyframes spinnerright {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(359deg);}
+}
+.loadcycle{
+  animation: spinnerright 6s linear infinite;  
+}

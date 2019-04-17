@@ -1,0 +1,106 @@
+<body>
+    <header>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="scripts/jquery-2.1.3.min.js"></script>
+		<script src="scripts/jquery.easing.js"></script>
+		
+        <h2>Animating with JavaScript</h2>
+        <h1>jQuery Animation</h1>
+		<script>
+		   $(document).ready(function(){
+			  //Receive event when click on the arrow to close or open the menu
+			  var isOpen = false;
+			  $("header nav > a").on("click", function(event){	
+				event.preventDefault();
+				if(!isOpen){
+					//$(this).parent().stop().animate({left:-100}, 500, "easeOutElastic", function(){
+					$(".slideOut").stop().animate({left:-100}, 500, "easeOutElastic", function(){
+						$(this).children().first().addClass("rotated");
+					});	
+					isOpen=true;
+				}else{
+					$(".slideOut").stop().animate({left:-300}, 500, "easeOutElastic", function(){
+						$(this).children().first().removeClass("rotated");
+					});	
+					isOpen=false;				
+				}				
+			  });
+		   });
+		</script>
+        <nav class="slideOut">
+            <a href="" title="Navigation Panel">&#10140;</a>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" title="">Lorem</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Ipsum</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Dolor</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Sit</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Amet</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Consectetur</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" title="">Adipiscing</a>
+                </li>
+            </ul>
+        </nav>
+		
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan finibus magna id laoreet. Integer et dictum purus,
+            in suscipit eros. Fusce imperdiet convallis justo ac finibus. Pellentesque at sollicitudin nibh. Ut imperdiet
+            id tortor sit amet bibendum. Nullam pretium luctus consectetur. Sed a dolor non sapien sagittis convallis. Nam
+            tellus tellus, iaculis ac diam nec, ultrices pulvinar justo. Aliquam at rutrum ipsum. Donec sed lacus vitae lorem
+            dapibus semper lacinia sed nibh. Nulla vitae bibendum erat. Sed sed lacus sem. Aliquam fringilla sollicitudin
+            risus, id ultricies diam faucibus id. Fusce scelerisque dignissim neque, sed luctus mi tincidunt ac.
+        </p>
+        <p>
+            Integer enim sapien, lobortis ut sem vitae, elementum imperdiet sapien. Praesent vel erat scelerisque, laoreet dui ac, pharetra
+            risus. Fusce dapibus, risus at ultricies vehicula, libero ligula commodo nibh, id dapibus orci eros quis lectus.
+            Sed porta ligula et arcu porta viverra. Phasellus diam ex, aliquet egestas lorem id, sagittis varius ligula.
+            Maecenas dolor enim, vehicula sed dolor a, aliquet vehicula augue. Nulla rhoncus interdum dui, non eleifend ante
+            blandit a. Nulla orci risus, egestas at eleifend quis, vestibulum in odio. Nullam aliquet placerat ligula, vel
+            efficitur tellus. Donec gravida eu metus nec elementum. Suspendisse sagittis, ligula sit amet mattis pharetra,
+            augue magna scelerisque nunc, sit amet auctor odio ligula eget justo.
+        </p>
+        <p>
+            Morbi aliquam, nibh a pretium ornare, risus lectus suscipit arcu, id aliquet ligula justo ac leo. Sed scelerisque massa in
+            arcu finibus rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Fusce pellentesque ante at turpis semper, eu accumsan augue commodo. Nam ac lobortis justo. Morbi nec nibh sem.
+            Integer malesuada mollis gravida. Nulla id facilisis nunc, ut efficitur turpis. Donec ullamcorper orci nec eleifend
+            egestas.
+        </p>
+        <p>
+            Vestibulum est felis, aliquet vel arcu a, bibendum tempus turpis. Proin luctus augue vel felis posuere elementum. Nulla vitae
+            nisi quis magna convallis aliquam vel eu enim. Suspendisse nisi mi, porttitor eget elit sit amet, varius lobortis
+            velit. Sed aliquet est ac faucibus imperdiet. Suspendisse id ligula ac felis finibus pulvinar sit amet vel leo.
+            Nullam venenatis diam nunc, ut laoreet velit ultricies eget. Etiam metus orci, tincidunt id lorem at, placerat
+            fringilla massa. Nam a arcu convallis, ornare urna et, auctor sem. Nulla ac dapibus lacus. Curabitur arcu justo,
+            porttitor at vehicula sit amet, bibendum eget mi. Duis at nisi nulla. Mauris iaculis urna a magna viverra, sit
+            amet tincidunt leo vulputate. Duis suscipit congue tincidunt. Duis sed dapibus odio. Vestibulum ante ipsum primis
+            in faucibus orci luctus et ultrices posuere cubilia Curae;
+        </p>
+        <p>
+            Nunc tristique eu purus nec rhoncus. Cras in quam sed ipsum mollis consequat vitae porta nulla. In id ante tempor, facilisis
+            tortor eget, laoreet ipsum. Nullam et aliquam dolor. Donec vitae eros et diam facilisis dignissim. Donec varius
+            eros at cursus imperdiet. Vestibulum iaculis a mauris a interdum. Phasellus sodales nunc dignissim porta laoreet.
+            Praesent dapibus rhoncus dolor, et ultricies felis sollicitudin id. Aenean mattis convallis vehicula. Morbi aliquet
+            porttitor ex ut gravida. Nulla facilisi.
+        </p>
+    </main>
+    <footer>
+        <p>© Copyright. All rights reserved.</p>
+    </footer>
+</body>
+
+
